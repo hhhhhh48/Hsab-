@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Difference Calculator - Days Between Two Dates</title>
+    <meta name="description" content="Calculate the exact difference between two dates in years, months, days, hours, minutes, and business days. Free online date difference calculator.">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How does the date difference calculator work?","acceptedAnswer":{"@type":"Answer","text":"It subtracts the start date from the end date, accounting for leap years and varying month lengths, to give you the exact difference."}},
+    {"@type":"Question","name":"Can I calculate business days only?","acceptedAnswer":{"@type":"Answer","text":"Yes, the calculator shows the total number of weekdays between the two dates, excluding weekends."}},
+    {"@type":"Question","name":"Does it count weekends and holidays?","acceptedAnswer":{"@type":"Answer","text":"The total days calculation includes all days. The business days calculation excludes only weekends, not public holidays."}}]}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav">
+            <a href="index.html">Age</a>
+            <a href="date-difference.html">Date Diff</a>
+            <a href="birthday-calculator.html">Birthday</a>
+            <a href="age-in-days.html">Age in Days</a>
+            <a href="chronological-age.html">Chronological</a>
+            <a href="pregnancy-calculator.html">Pregnancy</a>
+            <a href="retirement-calculator.html">Retirement</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <header>
+            <h1>Date Difference Calculator</h1>
+            <p>Find the exact time between two dates</p>
+        </header>
+        <div class="ad-slot">Advertisement</div>
+        <main class="card">
+            <div class="input-group">
+                <label for="startDate">Start Date</label>
+                <input type="date" id="startDate" required>
+            </div>
+            <div class="input-group">
+                <label for="endDate">End Date</label>
+                <input type="date" id="endDate" required>
+            </div>
+            <button id="calculateBtn">Calculate Difference</button>
+        </main>
+        <section id="results" class="results hidden">
+            <div class="main-result">
+                <h2>Difference</h2>
+                <p id="diffResult">--</p>
+            </div>
+            <div class="result-grid">
+                <div class="result-item"><span class="label">Total Days</span><span class="value" id="totalDays">--</span></div>
+                <div class="result-item"><span class="label">Total Weeks</span><span class="value" id="totalWeeks">--</span></div>
+                <div class="result-item"><span class="label">Business Days</span><span class="value" id="businessDays">--</span></div>
+                <div class="result-item"><span class="label">Total Hours</span><span class="value" id="totalHours">--</span></div>
+                <div class="result-item"><span class="label">Total Minutes</span><span class="value" id="totalMinutes">--</span></div>
+                <div class="result-item"><span class="label">Start Day</span><span class="value" id="startDay">--</span></div>
+                <div class="result-item"><span class="label">End Day</span><span class="value" id="endDay">--</span></div>
+            </div>
+        </section>
+        <div class="ad-slot">Advertisement</div>
+        <section class="content-section">
+            <h2>About the Date Difference Calculator</h2>
+            <p>Our free date difference calculator tells you exactly how much time lies between two dates. Enter a start date and an end date, and instantly get the difference broken down into years, months, and days, along with useful totals like the number of weeks, hours, and minutes. You can also see the day of the week each date falls on and a count of business days only.</p>
+            <p>This tool is useful for many real-life situations: calculating your work tenure, the duration of a project, the time until an event, or the time between two historical dates. The calculator accounts for leap years and varying month lengths, so the result is always precise.</p>
+        </section>
+        <section class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item"><h3>How does the date difference calculator work?</h3><p>It subtracts the start date from the end date, accounting for leap years and varying month lengths, to give you the exact difference.</p></div>
+            <div class="faq-item"><h3>Can I calculate business days only?</h3><p>Yes, the calculator shows the total number of weekdays between the two dates, excluding weekends.</p></div>
+            <div class="faq-item"><h3>Does it count weekends and holidays?</h3><p>The total days calculation includes all days. The business days calculation excludes only weekends, not public holidays.</p></div>
+        </section>
+    </div>
+    <script src="date-difference.js"></script>
+    <script src="common.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement Age Calculator - When Can I Retire?</title>
+    <meta name="description" content="Calculate how many years, months, and days remain until your retirement age. Free retirement age calculator with full retirement date.">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How is the retirement age calculated?","acceptedAnswer":{"@type":"Answer","text":"The calculator finds the exact date you will reach your chosen retirement age by adding your target age in years to your birth date."}},
+    {"@type":"Question","name":"What is the standard retirement age?","acceptedAnswer":{"@type":"Answer","text":"The standard retirement age varies by country. It is commonly 60-67 depending on your country's pension system."}},
+    {"@type":"Question","name":"Does the calculator consider early retirement?","acceptedAnswer":{"@type":"Answer","text":"Yes, you can enter any retirement age you choose, whether earlier or later than the standard."}}]}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav">
+            <a href="index.html">Age</a>
+            <a href="date-difference.html">Date Diff</a>
+            <a href="birthday-calculator.html">Birthday</a>
+            <a href="age-in-days.html">Age in Days</a>
+            <a href="chronological-age.html">Chronological</a>
+            <a href="pregnancy-calculator.html">Pregnancy</a>
+            <a href="retirement-calculator.html">Retirement</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <header><h1>Retirement Age Calculator</h1><p>Find out when you can retire</p></header>
+        <div class="ad-slot">Advertisement</div>
+        <main class="card">
+            <div class="input-group">
+                <label for="birthDate">Your Date of Birth</label>
+                <input type="date" id="birthDate" required>
+            </div>
+            <div class="input-group">
+                <label for="retireAge">Target Retirement Age</label>
+                <input type="number" id="retireAge" value="65" min="30" max="90" required>
+            </div>
+            <button id="calculateBtn">Calculate Retirement Date</button>
+        </main>
+        <section id="results" class="results hidden">
+            <div class="main-result"><h2>You Can Retire On</h2><p id="retireDate">--</p></div>
+            <div class="result-grid">
+                <div class="result-item"><span class="label">Time Remaining</span><span class="value" id="timeRemaining">--</span></div>
+                <div class="result-item"><span class="label">Years Left</span><span class="value" id="yearsLeft">--</span></div>
+                <div class="result-item"><span class="label">Months Left</span><span class="value" id="monthsLeft">--</span></div>
+                <div class="result-item"><span class="label">Days Left</span><span class="value" id="daysLeft">--</span></div>
+                <div class="result-item"><span class="label">Day of Week</span><span class="value" id="retireDay">--</span></div>
+            </div>
+        </section>
+        <div class="ad-slot">Advertisement</div>
+        <section class="content-section">
+            <h2>About the Retirement Age Calculator</h2>
+            <p>Planning for retirement starts with knowing exactly when you can retire. Our free retirement calculator tells you the precise date you will reach your target retirement age, along with the exact number of years, months, and days remaining until that day. Whether your country's retirement age is 60, 65, or 67, you can customize the target age to match your situation.</p>
+            <p>This tool is useful for financial planning, deciding when to start saving, or simply visualizing how much time is left before you stop working. It also works for planning early retirement if you want to retire before the standard age.</p>
+        </section>
+        <section class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item"><h3>How is the retirement age calculated?</h3><p>The calculator finds the exact date you will reach your chosen retirement age by adding your target age in years to your birth date.</p></div>
+            <div class="faq-item"><h3>What is the standard retirement age?</h3><p>The standard retirement age varies by country. It is commonly 60-67 depending on your country's pension system.</p></div>
+            <div class="faq-item"><h3>Does the calculator consider early retirement?</h3><p>Yes, you can enter any retirement age you choose, whether earlier or later than the standard.</p></div>
+        </section>
+    </div>
+    <script src="retirement.js"></script>
+    <script src="common.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronological Age Calculator - Medical & School Age</title>
+    <meta name="description" content="Calculate chronological age in years, months, and days for medical, educational, or developmental assessments. Free and accurate.">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is chronological age?","acceptedAnswer":{"@type":"Answer","text":"Chronological age is the exact amount of time that has passed since a person's birth, typically expressed in years, months, and days. It is often used in medical and educational assessments."}},
+    {"@type":"Question","name":"Why is chronological age important in education?","acceptedAnswer":{"@type":"Answer","text":"Schools use chronological age to determine enrollment eligibility, grade placement, and to compare a child's development to age-appropriate milestones."}},
+    {"@type":"Question","name":"How is it different from corrected age?","acceptedAnswer":{"@type":"Answer","text":"Chronological age counts from the actual birth date. Corrected age (used for premature babies) subtracts the number of weeks the baby was born early from the chronological age."}}]}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav">
+            <a href="index.html">Age</a>
+            <a href="date-difference.html">Date Diff</a>
+            <a href="birthday-calculator.html">Birthday</a>
+            <a href="age-in-days.html">Age in Days</a>
+            <a href="chronological-age.html">Chronological</a>
+            <a href="pregnancy-calculator.html">Pregnancy</a>
+            <a href="retirement-calculator.html">Retirement</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <header>
+            <h1>Chronological Age Calculator</h1>
+            <p>For medical and educational assessments</p>
+        </header>
+        <div class="ad-slot">Advertisement</div>
+        <main class="card">
+            <div class="input-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" required>
+            </div>
+            <div class="input-group">
+                <label for="assessment">Date of Assessment</label>
+                <input type="date" id="assessment" required>
+            </div>
+            <button id="calculateBtn">Calculate Chronological Age</button>
+        </main>
+        <section id="results" class="results hidden">
+            <div class="main-result">
+                <h2>Chronological Age (Y-M-D)</h2>
+                <p id="medicalFormat">--</p>
+                <p style="font-size:0.9rem;color:#888;margin-top:8px;" id="mainAge">--</p>
+            </div>
+            <div class="result-grid">
+                <div class="result-item"><span class="label">Total Months</span><span class="value" id="totalMonths">--</span></div>
+                <div class="result-item"><span class="label">Total Weeks</span><span class="value" id="totalWeeks">--</span></div>
+                <div class="result-item"><span class="label">Total Days</span><span class="value" id="totalDays">--</span></div>
+            </div>
+        </section>
+        <div class="ad-slot">Advertisement</div>
+        <section class="content-section">
+            <h2>About the Chronological Age Calculator</h2>
+            <p>Chronological age is the exact time elapsed since a person's birth, usually expressed in years, months, and days. This calculator gives you the chronological age in the medical format (Y-M-D), which is commonly used by pediatricians, psychologists, educators, and speech therapists to assess a child's development.</p>
+            <p>To use it, simply enter the date of birth and the date of assessment (which could be today or any future date). The calculator will instantly display the chronological age in years-months-days format, along with the total number of months, weeks, and days. This is especially useful for school enrollment decisions and developmental milestone comparisons.</p>
+        </section>
+        <section class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item"><h3>What is chronological age?</h3><p>Chronological age is the exact amount of time that has passed since a person's birth, typically expressed in years, months, and days.</p></div>
+            <div class="faq-item"><h3>Why is chronological age important in education?</h3><p>Schools use chronological age to determine enrollment eligibility, grade placement, and to compare a child's development to age-appropriate milestones.</p></div>
+            <div class="faq-item"><h3>How is it different from corrected age?</h3><p>Chronological age counts from the actual birth date. Corrected age (used for premature babies) subtracts the number of weeks the baby was born early.</p></div>
+        </section>
+    </div>
+    <script src="chronological.js"></script>
+    <script src="common.js"></script>
+</body>
+</html>

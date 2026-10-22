@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age in Days Calculator - How Many Days Old Am I?</title>
+    <meta name="description" content="Find out exactly how many days, hours, minutes, and seconds old you are. Free age in days calculator for all ages.">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How is age in days calculated?","acceptedAnswer":{"@type":"Answer","text":"The calculator subtracts your birth date from the current date and converts the difference into total days, hours, minutes, and seconds, accounting for leap years."}},
+    {"@type":"Question","name":"Why does the total days number change each day?","acceptedAnswer":{"@type":"Answer","text":"Because your age increases by one day every 24 hours, so the total number of days you have lived grows daily."}},
+    {"@type":"Question","name":"Can I use this for any age?","acceptedAnswer":{"@type":"Answer","text":"Yes, the calculator works for any birth date, from newborns to people over 100 years old."}}]}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav">
+            <a href="index.html">Age</a>
+            <a href="date-difference.html">Date Diff</a>
+            <a href="birthday-calculator.html">Birthday</a>
+            <a href="age-in-days.html">Age in Days</a>
+            <a href="chronological-age.html">Chronological</a>
+            <a href="pregnancy-calculator.html">Pregnancy</a>
+            <a href="retirement-calculator.html">Retirement</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <header>
+            <h1>Age in Days Calculator</h1>
+            <p>Discover how many days you have lived</p>
+        </header>
+        <div class="ad-slot">Advertisement</div>
+        <main class="card">
+            <div class="input-group">
+                <label for="birthDate">Your Birth Date</label>
+                <input type="date" id="birthDate" required>
+            </div>
+            <button id="calculateBtn">Calculate My Days</button>
+        </main>
+        <section id="results" class="results hidden">
+            <div class="main-result">
+                <h2>You Have Lived</h2>
+                <p id="mainDays">--</p>
+            </div>
+            <div class="result-grid">
+                <div class="result-item"><span class="label">Total Weeks</span><span class="value" id="totalWeeks">--</span></div>
+                <div class="result-item"><span class="label">Total Months</span><span class="value" id="totalMonths">--</span></div>
+                <div class="result-item"><span class="label">Total Hours</span><span class="value" id="totalHours">--</span></div>
+                <div class="result-item"><span class="label">Total Minutes</span><span class="value" id="totalMinutes">--</span></div>
+                <div class="result-item"><span class="label">Total Seconds</span><span class="value" id="totalSeconds">--</span></div>
+            </div>
+        </section>
+        <div class="ad-slot">Advertisement</div>
+        <section class="content-section">
+            <h2>About the Age in Days Calculator</h2>
+            <p>Have you ever wondered exactly how many days you have been alive? Our age in days calculator gives you a precise answer in seconds. Enter your date of birth and instantly see the total number of days, weeks, months, hours, minutes, and even seconds you have lived since the day you were born.</p>
+            <p>This tool is perfect for celebrating milestone days (like your 10,000th day alive), tracking your child's development, or simply satisfying your curiosity about the passage of time. It automatically handles leap years, so the count is always accurate.</p>
+        </section>
+        <section class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item"><h3>How is age in days calculated?</h3><p>The calculator subtracts your birth date from the current date and converts the difference into total days, hours, minutes, and seconds, accounting for leap years.</p></div>
+            <div class="faq-item"><h3>Why does the total days number change each day?</h3><p>Because your age increases by one day every 24 hours, so the total number of days you have lived grows daily.</p></div>
+            <div class="faq-item"><h3>Can I use this for any age?</h3><p>Yes, the calculator works for any birth date, from newborns to people over 100 years old.</p></div>
+        </section>
+    </div>
+    <script src="age-in-days.js"></script>
+    <script src="common.js"></script>
+</body>
+</html>

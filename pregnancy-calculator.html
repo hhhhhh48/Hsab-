@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregnancy Due Date Calculator - Estimate Your Baby's Birth Date</title>
+    <meta name="description" content="Calculate your pregnancy due date based on your last menstrual period. Free pregnancy calculator showing trimester dates and weeks pregnant.">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How is the pregnancy due date calculated?","acceptedAnswer":{"@type":"Answer","text":"The due date is estimated by adding 280 days (40 weeks) to the first day of your last menstrual period, using Naegele's rule."}},
+    {"@type":"Question","name":"How accurate is the due date?","acceptedAnswer":{"@type":"Answer","text":"Only about 4% of babies are born on their exact due date. Most births occur within a week before or after."}},
+    {"@type":"Question","name":"What are the three trimesters?","acceptedAnswer":{"@type":"Answer","text":"The first trimester is weeks 1-13, the second is weeks 14-26, and the third is weeks 27-40."}}]}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav">
+            <a href="index.html">Age</a>
+            <a href="date-difference.html">Date Diff</a>
+            <a href="birthday-calculator.html">Birthday</a>
+            <a href="age-in-days.html">Age in Days</a>
+            <a href="chronological-age.html">Chronological</a>
+            <a href="pregnancy-calculator.html">Pregnancy</a>
+            <a href="retirement-calculator.html">Retirement</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <header><h1>Pregnancy Due Date Calculator</h1><p>Estimate your baby's arrival date</p></header>
+        <div class="ad-slot">Advertisement</div>
+        <main class="card">
+            <div class="input-group">
+                <label for="lmp">First Day of Last Menstrual Period</label>
+                <input type="date" id="lmp" required>
+            </div>
+            <button id="calculateBtn">Calculate Due Date</button>
+        </main>
+        <section id="results" class="results hidden">
+            <div class="main-result"><h2>Estimated Due Date</h2><p id="dueDate">--</p></div>
+            <div class="result-grid">
+                <div class="result-item"><span class="label">Weeks Pregnant</span><span class="value" id="weeksPregnant">--</span></div>
+                <div class="result-item"><span class="label">Trimester</span><span class="value" id="trimester">--</span></div>
+                <div class="result-item"><span class="label">Days Remaining</span><span class="value" id="daysRemaining">--</span></div>
+                <div class="result-item"><span class="label">First Trimester Ends</span><span class="value" id="t1End">--</span></div>
+                <div class="result-item"><span class="label">Second Trimester Ends</span><span class="value" id="t2End">--</span></div>
+                <div class="result-item"><span class="label">Conception (est.)</span><span class="value" id="conception">--</span></div>
+            </div>
+        </section>
+        <div class="ad-slot">Advertisement</div>
+        <section class="content-section">
+            <h2>About the Pregnancy Due Date Calculator</h2>
+            <p>Our free pregnancy calculator estimates your baby's due date based on the first day of your last menstrual period. It uses Naegele's rule, which adds 280 days (40 weeks) to your last period to estimate when your baby will arrive. You will also see your current week of pregnancy, which trimester you are in, and the estimated conception date.</p>
+            <p>Remember that only about 4% of babies are born exactly on their due date — most arrive within a week before or after. Always consult your doctor for the most accurate assessment, as ultrasound dating may adjust your due date.</p>
+        </section>
+        <section class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item"><h3>How is the pregnancy due date calculated?</h3><p>The due date is estimated by adding 280 days (40 weeks) to the first day of your last menstrual period.</p></div>
+            <div class="faq-item"><h3>How accurate is the due date?</h3><p>Only about 4% of babies are born on their exact due date. Most births occur within a week before or after.</p></div>
+            <div class="faq-item"><h3>What are the three trimesters?</h3><p>The first trimester is weeks 1-13, the second is weeks 14-26, and the third is weeks 27-40.</p></div>
+        </section>
+    </div>
+    <script src="pregnancy.js"></script>
+    <script src="common.js"></script>
+</body>
+</html>

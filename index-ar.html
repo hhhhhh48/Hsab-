@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة العمر - احسب عمرك بالسنوات والأشهر والأيام</title>
+    <meta name="description" content="حاسبة عمر مجانية ودقيقة. احسب عمرك بالسنوات والأشهر والأيام والساعات، واعرف كم يوماً تبقى لعيد ميلادك القادم.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { direction: rtl; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        .site-nav a { direction: rtl; }
+        .input-group input, .result-item .value { direction: ltr; text-align: right; }
+        #ageResult { direction: rtl; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="lang-switch">🌐 English</a>
+    <div class="container">
+        <header><h1>حاسبة العمر</h1><p>اعرف عمرك بدقة في ثوانٍ</p></header>
+        <div class="ad-slot">إعلان</div>
+        <main class="card">
+            <div class="input-group">
+                <label for="birthdate">تاريخ الميلاد</label>
+                <input type="date" id="birthdate" required>
+            </div>
+            <div class="input-group">
+                <label for="currentdate">احسب العمر حتى تاريخ (اختياري)</label>
+                <input type="date" id="currentdate">
+            </div>
+            <button id="calculateBtn">احسب عمري</button>
+        </main>
+        <section id="results" class="results hidden">
+            <div class="main-result">
+                <h2>عمرك الدقيق</h2>
+                <p id="ageResult">--</p>
+            </div>
+            <div class="result-grid">
+                <div class="result-item"><span class="label">إجمالي الأيام</span><span class="value" id="totalDays">--</span></div>
+                <div class="result-item"><span class="label">إجمالي الأسابيع</span><span class="value" id="totalWeeks">--</span></div>
+                <div class="result-item"><span class="label">إجمالي الساعات</span><span class="value" id="totalHours">--</span></div>
+                <div class="result-item"><span class="label">يوم الميلاد</span><span class="value" id="bornDay">--</span></div>
+                <div class="result-item"><span class="label">عيد الميلاد القادم</span><span class="value" id="nextBirthday">--</span></div>
+            </div>
+        </section>
+        <div class="ad-slot">إعلان</div>
+        <section class="content-section">
+            <h2>عن حاسبة العمر</h2>
+            <p>حاسبة العمر المجانية تخبرك بعمرك الدقيق بالسنوات والأشهر والأيام. أدخل تاريخ ميلادك وستحصل على عمرك مفصلاً بدقة، مع معلومات إضافية مثل إجمالي الأيام والأسابيع والساعات التي عشتها. يمكنك أيضاً معرفة يوم الأسبوع الذي ولدت فيه والوقت المتبقي لعيد ميلادك القادم.</p>
+        </section>
+    </div>
+    <script>
+        const arDays = ['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+        const bIn = document.getElementById('birthdate');
+        const cIn = document.getElementById('currentdate');
+        const today = new Date().toISOString().split('T')[0];
+        bIn.max = today;
+        document.getElementById('calculateBtn').addEventListener('click', function() {
+            const b = new Date(bIn.value);
+            const now = cIn.value ? new Date(cIn.value) : new Date();
+            if (isNaN(b)) { alert('أدخل تاريخ الميلاد'); return; }
+            if (b > now) { alert('تاريخ الميلاد لا يمكن أن يكون في المستقبل'); return; }
+            let y = now.getFullYear() - b.getFullYear();
+            let m = now.getMonth() - b.getMonth();
+            let d = now.getDate() - b.getDate();
+            if (d < 0) { m--; d += new Date(now.getFullYear(), now.getMonth(), 0).getDate(); }
+            if (m < 0) { y--; m += 12; }
+            const totalDays = Math.floor((now - b) / 86400000);
+            const totalWeeks = Math.floor(totalDays / 7);
+            const totalHours = totalDays * 24;
+            document.getElementById('ageResult').textContent = y + ' سنة، ' + m + ' شهر، ' + d + ' يوم';
+            document.getElementById('totalDays').textContent = totalDays.toLocaleString('ar-EG');
+            document.getElementById('totalWeeks').textContent = totalWeeks.toLocaleString('ar-EG');
+            document.getElementById('totalHours').textContent = totalHours.toLocaleString('ar-EG');
+            document.getElementById('bornDay').textContent = arDays[b.getDay()];
+            let nb = new Date(now.getFullYear(), b.getMonth(), b.getDate());
+            if (nb < now) nb = new Date(now.getFullYear() + 1, b.getMonth(), b.getDate());
+            const days = Math.ceil((nb - now) / 86400000);
+            document.getElementById('nextBirthday').textContent = days === 0 ? 'اليوم!' : 'بعد ' + days + ' يوم';
+            document.getElementById('results').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

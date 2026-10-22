@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator - Calculate Your Exact Age in Years, Months, Days</title>
+    <meta name="description" content="Free online age calculator. Find your exact age in years, months, days, hours and minutes. Also shows days until your next birthday and the day of week you were born.">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How is age calculated?","acceptedAnswer":{"@type":"Answer","text":"Age is calculated by finding the difference between your birth date and the current date, accounting for leap years and varying month lengths."}},
+    {"@type":"Question","name":"What about people born on February 29?","acceptedAnswer":{"@type":"Answer","text":"People born on February 29 are handled correctly. In non-leap years, their next birthday is counted from March 1."}},
+    {"@type":"Question","name":"Can I calculate my age at a future date?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter a future date in the Age at Date field to see how old you will be on that date."}}]}
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="site-nav">
+            <a href="index.html">Age</a>
+            <a href="date-difference.html">Date Diff</a>
+            <a href="birthday-calculator.html">Birthday</a>
+            <a href="age-in-days.html">Age in Days</a>
+            <a href="chronological-age.html">Chronological</a>
+            <a href="pregnancy-calculator.html">Pregnancy</a>
+            <a href="retirement-calculator.html">Retirement</a>
+            <a href="blog.html">Blog</a>
+        </nav>
+        <header>
+            <h1>Age Calculator</h1>
+            <p>Find your exact age in seconds</p>
+        </header>
+        <div class="ad-slot">Advertisement</div>
+        <main class="card">
+            <div class="input-group">
+                <label for="birthdate">Date of Birth</label>
+                <input type="date" id="birthdate" required>
+            </div>
+            <div class="input-group">
+                <label for="currentdate">Age at Date (optional)</label>
+                <input type="date" id="currentdate">
+            </div>
+            <button id="calculateBtn">Calculate Age</button>
+        </main>
+        <section id="results" class="results hidden">
+            <div class="main-result">
+                <h2>Your Exact Age</h2>
+                <p id="ageResult">--</p>
+            </div>
+            <div id="countdownBox" class="countdown-box hidden">
+                <span class="label">Next Birthday Countdown</span>
+                <span id="countdown" class="countdown-value">--</span>
+            </div>
+                        <div id="progressBox" class="progress-container hidden">
+                <h3>Life Progress (based on 80-year average)</h3>
+                <div class="progress-bar"><div class="progress-fill" id="progressFill">0%</div></div>
+                <div class="progress-label" id="progressLabel">--</div>
+            </div>
+            <div class="result-grid">
+                <div class="result-item"><span class="label">Total Days</span><span class="value" id="totalDays">--</span></div>
+                <div class="result-item"><span class="label">Total Weeks</span><span class="value" id="totalWeeks">--</span></div>
+                <div class="result-item"><span class="label">Total Hours</span><span class="value" id="totalHours">--</span></div>
+                <div class="result-item"><span class="label">Total Minutes</span><span class="value" id="totalMinutes">--</span></div>
+                <div class="result-item"><span class="label">Born On</span><span class="value" id="bornDay">--</span></div>
+                <div class="result-item"><span class="label">Next Birthday</span><span class="value" id="nextBirthday">--</span></div>
+            </div>
+        </section>
+        <div class="ad-slot">Advertisement</div>
+        <section class="content-section">
+            <h2>About the Age Calculator</h2>
+            <p>Our free age calculator instantly tells you your exact age in years, months, and days. Simply enter your date of birth, and the calculator will show your age broken down precisely, along with useful details such as the total number of days, weeks, hours, and minutes you have lived. You can also see the day of the week you were born and a live countdown to your next birthday.</p>
+            <p>The calculator is completely free, requires no registration, and works on any device. Whether you need your age for a form, a visa application, or just curiosity, this tool gives you the precise answer in seconds.</p>
+        </section>
+        <section class="content-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item"><h3>How is age calculated?</h3><p>Age is calculated by finding the difference between your birth date and the current date, accounting for leap years and varying month lengths.</p></div>
+            <div class="faq-item"><h3>What about people born on February 29?</h3><p>People born on February 29 are handled correctly. In non-leap years, their next birthday is counted from March 1.</p></div>
+            <div class="faq-item"><h3>Can I calculate my age at a future date?</h3><p>Yes. Enter a future date in the "Age at Date" field to see how old you will be on that date.</p></div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+    <script src="common.js"></script>
+</body>
+</html>
